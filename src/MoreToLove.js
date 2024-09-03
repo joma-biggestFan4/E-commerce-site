@@ -21,15 +21,16 @@ function MoreToLove() {
     let myCartArr = []
     // localStorage.clear()
     // if (ele.name
-    console.log(myCartArr)
+    // localStorage.setItem("cart", JSON.stringify(myCartArr))
     myCartArr = JSON.parse(localStorage.getItem("cart"))
+    console.log(myCartArr)
     if (!myCartArr.includes(ele)) {
       myCartArr.push(ele)
-      console.log(myCartArr)
       localStorage.setItem("cart", JSON.stringify(myCartArr))
+      console.log(myCartArr)
     }
     else {
-      alert(`${ele.name} alreadye exist in cart`)
+      alert(`${ele.name} already exist in cart`)
     }
   }
 

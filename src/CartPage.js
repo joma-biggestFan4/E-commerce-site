@@ -71,8 +71,19 @@ function CartPage() {
     let product = JSON.parse(localStorage.getItem("cart"))
     const removeItem = ele => {
         const eleIndex = localStorages.findIndex(user => user.name === ele.name)
-        setLocalStorage(localStorages.filter((_, index) => index != eleIndex))
+        // setLocalStorage(localStorages.filter((_, index) => index != eleIndex))
+
+       
+        setLocalStorage(localStorages.splice(eleIndex, 1))
         localStorage.setItem("cart", JSON.stringify(localStorages));
+        console.log(localStorages.length)
+
+        
+
+        // if (localStorages.length === 0) {
+        //     localStorage.setItem("cart", JSON.stringify([]));
+        // }
+
         console.log(localStorages)
     }
     // console.log(product)
@@ -174,7 +185,8 @@ function CartPage() {
                                 </div>
                             )
                          })
-                    ) : <div className="empty-cart-container"><img src={notHighlight} alt="Cart Image" className="empty-cart"/><p>Your cart is currently empty</p></div>
+                    ) : 
+                    <div className="empty-cart-container"><img src={notHighlight} alt="Cart Image" className="empty-cart"/><p>Your cart is currently empty</p></div>
 
                     }
                 </div>
