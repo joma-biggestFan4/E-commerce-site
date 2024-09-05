@@ -12,11 +12,7 @@ import watch from "./Images/watch.png"
 import green from "./Images/greenStuff.png"
 import img from "./Images/img.png"
 import topHat from "./Images/topHat.png"
-// import notHighlight from "./Images/non-highlight-cart.png"
-// import fiveStar from "./Images/Frame 36.png" 
 import crossBag from "./Images/crossBag.png"
-// import image from "./Images/image 37.png"
-// import Cart from "./Images/cart.jpg"
 
 function CartPage() {
 
